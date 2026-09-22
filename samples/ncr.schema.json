@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "required": ["ncr_number", "title", "severity"],
+  "properties": {
+    "ncr_number": { "type": "string" },
+    "title": { "type": "string" },
+    "severity": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"] },
+    "lot_number": { "type": "string" }
+  }
+}
