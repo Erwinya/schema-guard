@@ -99,5 +99,9 @@ def main(argv: list[str] | None = None) -> int:
     return 0
 
 
-if __name__ == "__main__":
+def run() -> None:
     raise SystemExit(main())
+
+
+if __name__ == "__main__":
+    run()

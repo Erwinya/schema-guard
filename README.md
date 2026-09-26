@@ -4,7 +4,7 @@ Validate JSON documents against a **small JSON Schema subset** (`type`, `require
 
 ## Status
 
-CLI, JSON loading, and schema validation are in place. Packaging / tests will land in follow-up commits.
+CLI, validation, packaging (`pyproject.toml`), and unit tests are in place.
 
 ## Run
 
@@ -13,10 +13,24 @@ python src\schema_guard.py --schema samples\ncr.schema.json --data samples\ncr.v
 python src\schema_guard.py --schema samples\ncr.schema.json --data samples\ncr.invalid.json
 ```
 
+Install locally (optional):
+
+```powershell
+pip install -e .
+schema-guard --schema samples\ncr.schema.json --data samples\ncr.valid.json
+```
+
+## Development
+
+```powershell
+pip install -e ".[dev]"
+pytest
+```
+
 ## Requirements
 
 - Python 3.10+
-- Standard library only
+- Standard library only (pytest optional for tests)
 
 ## License
 

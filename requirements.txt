@@ -1,0 +1,2 @@
+﻿# stdlib only — no third-party packages required for runtime
+# optional: pip install -e ".[dev]" for pytest
