@@ -4,7 +4,7 @@ Validate JSON documents against a **small JSON Schema subset** (`type`, `require
 
 ## Status
 
-CLI, validation, packaging (`pyproject.toml`), and unit tests are in place.
+Ready for use: validation CLI, packaging, unit tests, and CI.
 
 ## Run
 
