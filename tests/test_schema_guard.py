@@ -56,6 +56,20 @@ class ValidateTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 schema_guard.load_json(bad)
 
+    def test_array_items(self) -> None:
+        schema = {
+            "type": "array",
+            "items": {"type": "integer"},
+        }
+        schema_guard.validate([1, 2, 3], schema)
+        with self.assertRaises(schema_guard.SchemaError):
+            schema_guard.validate([1, "x"], schema)
+
+    def test_integer_accepted_as_number(self) -> None:
+        schema = {"type": "number"}
+        schema_guard.validate(3, schema)
+        schema_guard.validate(3.5, schema)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -4,7 +4,7 @@ Validate JSON documents against a **small JSON Schema subset** (`type`, `require
 
 ## Status
 
-Ready for use: validation CLI, packaging, unit tests, and CI.
+Complete: validation CLI, packaging, unit tests (including array/number edge cases), and CI.
 
 ## Run
 
